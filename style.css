@@ -1,0 +1,155 @@
+:root {
+    /*Primary*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /*Neutral*/
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url(./fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    container: body / inline-size;
+    margin: 0;
+    background: var(--cream);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    width: 100cqw;
+    max-width: 1440px;
+    height: 100cqh;
+    margin: auto;
+    container: main / inline-size;
+}
+
+section[class="card"] {
+    display: grid;
+    width: 50cqw;
+    grid-template-columns: 50% 50%;
+    background: white;
+    color: var(--dark-grayish-blue);
+    font-family: 'Montserrat';
+    border-radius: 25px;
+}
+
+section[class="card-image"] img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+section[class="card-text"] {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+}
+
+section[class="card-text"] h3 {
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+section[class="card-text"] h1 {
+    font-size: 2.2em;
+    font-family: 'Fraunces';
+    font-weight: 700;
+    margin: 0;
+    color: black;
+}
+
+section[class="card-text"] p {
+    font-weight: 500;
+}
+
+section[class="price"] {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    place-items: center;
+    gap: 10px;
+}
+
+span[class="current-price"] {
+    color: var(--dark-cyan);
+    font-size: 1.8em;
+}
+
+span[class="previous-price"] {
+    color: var(--dark-grayish-blue);
+    font-size: 0.8em;
+    text-decoration: line-through;
+}
+
+button {
+    background: var(--dark-cyan);
+    color: white;
+    border-radius: 25px;
+    border-color: transparent;
+    outline-color: transparent;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+}
+
+button:hover {
+    background: hsl(158, 36%, 20%);
+}
+
+button span::before {
+    content: "";
+    background-image: url(./images/icon-cart.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    position: absolute;
+    left: 30%;
+    place-self: center;
+}
+
+@container (inline-size<1000px) {
+
+    section[class="card"] {
+        display: grid;
+        width: 90cqw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 35cqh 55cqh;
+        background: white;
+        color: var(--dark-grayish-blue);
+        font-family: 'Montserrat';
+        border-radius: 25px;
+    }
+
+    section[class="card-image"] img {
+        object-fit: cover;
+        width: 100%;
+        height: 35cqh;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 25px;
+    }
+
+    section[class="card-text"] h1 {
+        font-size: 1.8em;
+    }
+}
