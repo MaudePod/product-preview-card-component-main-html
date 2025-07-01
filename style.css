@@ -41,7 +41,7 @@ section[class="card"] {
     grid-template-columns: 50% 50%;
     background: white;
     color: var(--dark-grayish-blue);
-    font-family: 'Montserrat';
+    font-family: 'Montserrat',sans-serif;
     border-radius: 25px;
 }
 
@@ -69,7 +69,7 @@ section[class="card-text"] h3 {
 
 section[class="card-text"] h1 {
     font-size: 2.2em;
-    font-family: 'Fraunces';
+    font-family: 'Fraunces',serif;
     font-weight: 700;
     margin: 0;
     color: black;
@@ -80,7 +80,7 @@ section[class="card-text"] p {
 }
 
 section[class="price"] {
-    font-family: 'Fraunces';
+    font-family: 'Fraunces',serif;
     font-weight: 700;
     display: grid;
     grid-template-columns: min-content min-content;
